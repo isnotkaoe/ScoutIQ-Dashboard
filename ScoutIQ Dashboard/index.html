@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScoutIQ Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    
+    <div class="background-effects">
+
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+
+</div>
+
+    <div class="container">
+
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>ScoutIQ</h2>
+            </div>
+            
+            <nav>
+                <a href="#" class="active">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-futbol"></i>
+                    <span>Jogadores</span>
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-shield"></i>
+                    <span>Clubes</span>
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-flag"></i>
+                    <span>Seleções</span>
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span>Ligas</span>
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Comparar</span>
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <span>Relatoríos</span>
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Favoritos</span>
+                </a>
+
+            </nav>
+
+        </aside>
+
+        <main class="content">
+
+            <header class="topbar">
+
+    <div class="topbar-left">
+
+        <button class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                placeholder="Buscar jogador, clube ou seleção...">
+
+        </div>
+
+    </div>
+
+    <div class="topbar-right">
+
+        <div class="clock">
+
+            <span id="date"></span>
+
+            <strong id="time"></strong>
+
+        </div>
+
+        <button class="notification">
+
+            <i class="fa-solid fa-bell"></i>
+
+            <span class="badge">3</span>
+
+        </button>
+
+        <div class="profile">
+
+            <img src="https://placehold.co/45x45" alt="">
+
+            <div>
+
+                <h4>Tiago</h4>
+
+                <span>Scout</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+            <section class="hero">
+
+    <div class="hero-text">
+
+        <span class="tag">
+            <i class="fa-solid fa-chart-line"></i>
+            Plataforma de Análise
+        </span>
+
+        <h1>
+            Transformando dados
+            <span>em inteligência para o futebol.</span>
+        </h1>
+
+        <p>
+            Analise jogadores, clubes, seleções e competições através de
+            estatísticas modernas e visualizações intuitivas.
+        </p>
+
+        <div class="hero-buttons">
+
+            <button class="btn-primary">
+                Explorar Dados
+            </button>
+
+            <button class="btn-secondary">
+                Ver Relatórios
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="hero-preview">
+
+        <div class="floating-card top">
+            <small>Precisão</small>
+            <h2>96%</h2>
+        </div>
+
+        <div class="floating-card middle">
+            <small>Jogadores</small>
+            <h2>32K+</h2>
+        </div>
+
+        <div class="floating-card bottom">
+            <small>Análises</small>
+            <h2>12.8K</h2>
+        </div>
+
+    </div>
+
+</section>
+
+            <section class="stats">
+                
+                <div class="card">
+                   <h2 class="counter" data-target="32000">0</h2>
+                    <p>Jogadores</p>
+                </div>
+
+                <div class="card">
+                   <h2 class="counter" data-target="1800">0</h2>
+                    <p>Clubes</p>
+                </div>
+
+                <div class="card">
+                    <h2 class="counter" data-target="120">0</h2>
+                    <p>Ligas</p>
+                </div>
+
+                <div class="card">
+                    <h2 class="counter" data-target="250">0</h2>
+                    <p>Seleções</p>
+                </div>
+
+            </section>
+
+            <section class="graph">
+
+    <div class="graph-header">
+
+        <div>
+            <h3>Crescimento da Base</h3>
+            <p>Últimos 12 meses</p>
+        </div>
+
+    </div>
+
+    <svg viewBox="0 0 1000 300" class="chart">
+
+        <!-- Linhas horizontais -->
+
+        <line x1="0" y1="50" x2="1000" y2="50" class="grid"/>
+
+        <line x1="0" y1="100" x2="1000" y2="100" class="grid"/>
+
+        <line x1="0" y1="150" x2="1000" y2="150" class="grid"/>
+
+        <line x1="0" y1="200" x2="1000" y2="200" class="grid"/>
+
+        <line x1="0" y1="250" x2="1000" y2="250" class="grid"/>
+
+        <!-- Linha principal -->
+
+        <polyline
+            id="line"
+            points="
+            50,220
+            150,180
+            250,195
+            350,130
+            450,160
+            550,100
+            650,120
+            750,80
+            850,60
+            950,30"
+        />
+
+        <!-- Pontos -->
+
+        <circle cx="50" cy="220" r="6"/>
+
+        <circle cx="150" cy="180" r="6"/>
+
+        <circle cx="250" cy="195" r="6"/>
+
+        <circle cx="350" cy="130" r="6"/>
+
+        <circle cx="450" cy="160" r="6"/>
+
+        <circle cx="550" cy="100" r="6"/>
+
+        <circle cx="650" cy="120" r="6"/>
+
+        <circle cx="750" cy="80" r="6"/>
+
+        <circle cx="850" cy="60" r="6"/>
+
+        <circle cx="950" cy="30" r="6"/>
+
+    </svg>
+
+</section>
+
+<section class="dashboard-grid">
+
+    <div class="panel">
+
+        <h3>Top Jogadores</h3>
+
+        <div class="player">
+
+            <img src="https://placehold.co/55x55" alt="">
+
+            <div>
+
+                <h4>Lionel Messi</h4>
+
+                <span>Inter Miami</span>
+
+            </div>
+
+            <strong>94</strong>
+
+        </div>
+
+        <div class="player">
+
+            <img src="https://placehold.co/55x55" alt="">
+
+            <div>
+
+                <h4>Erling Haaland</h4>
+
+                <span>Manchester City</span>
+
+            </div>
+
+            <strong>92</strong>
+
+        </div>
+
+        <div class="player">
+
+            <img src="https://placehold.co/55x55" alt="">
+
+            <div>
+
+                <h4>Jude Bellingham</h4>
+
+                <span>Real Madrid</span>
+
+            </div>
+
+            <strong>91</strong>
+
+        </div>
+
+    </div>
+
+    <div class="panel">
+
+        <h3>Últimas Análises</h3>
+
+        <ul>
+
+            <li>✔️ Vinícius Jr - Extremo Esquerdo</li>
+
+            <li>✔️ Pedri - Meio Campo</li>
+
+            <li>✔️ Rodri - Volante</li>
+
+            <li>✔️ Gyökeres - Centroavante</li>
+
+            <li>✔️ Bastoni - Zagueiro</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<section class="bottom-grid">
+
+    <div class="panel">
+
+        <div class="panel-header">
+
+            <h3>Atividades Recentes</h3>
+
+            <button>Ver tudo</button>
+
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Jogador</th>
+                    <th>Clube</th>
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>Vinícius Jr.</td>
+                    <td>Real Madrid</td>
+
+                    <td>
+                        <span class="status success">
+                            Concluído
+                        </span>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Pedri</td>
+                    <td>Barcelona</td>
+
+                    <td>
+                        <span class="status warning">
+                            Revisão
+                        </span>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Rodri</td>
+                    <td>Manchester City</td>
+
+                    <td>
+                        <span class="status success">
+                            Concluído
+                        </span>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Bastoni</td>
+                    <td>Inter</td>
+
+                    <td>
+                        <span class="status danger">
+                            Pendente
+                        </span>
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <div class="panel">
+
+        <h3>Distribuição por posição</h3>
+
+        <div class="bars">
+
+            <div class="bar">
+
+                <span>Goleiros</span>
+
+                <div class="progress">
+
+                    <div style="width:40%"></div>
+
+                </div>
+
+            </div>
+
+            <div class="bar">
+
+                <span>Zagueiros</span>
+
+                <div class="progress">
+
+                    <div style="width:75%"></div>
+
+                </div>
+
+            </div>
+
+            <div class="bar">
+
+                <span>Meio-campo</span>
+
+                <div class="progress">
+
+                    <div style="width:90%"></div>
+
+                </div>
+
+            </div>
+
+            <div class="bar">
+
+                <span>Atacantes</span>
+
+                <div class="progress">
+
+                    <div style="width:65%"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="charts-grid">
+
+    <div class="panel">
+
+        <h3>Distribuição por Categoria</h3>
+
+        <div class="donut-container">
+
+            <svg class="donut" width="240" height="240">
+
+                <circle
+                    class="donut-bg"
+                    cx="120"
+                    cy="120"
+                    r="90">
+                </circle>
+
+                <circle
+                    class="donut-progress"
+                    cx="120"
+                    cy="120"
+                    r="90">
+                </circle>
+
+            </svg>
+
+            <div class="donut-value">
+
+                <h2>74%</h2>
+
+                <span>Concluído</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="panel">
+
+        <h3>Legenda</h3>
+
+        <div class="legend">
+
+            <div>
+
+                <span class="dot green"></span>
+
+                Jogadores
+
+            </div>
+
+            <div>
+
+                <span class="dot blue"></span>
+
+                Clubes
+
+            </div>
+
+            <div>
+
+                <span class="dot yellow"></span>
+
+                Ligas
+
+            </div>
+
+            <div>
+
+                <span class="dot red"></span>
+
+                Seleções
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="performance">
+
+    <div class="panel">
+
+        <div class="performance-header">
+
+            <div>
+
+                <span class="performance-tag">
+                    Crescimento
+                </span>
+
+                <h2>Performance Geral</h2>
+
+            </div>
+
+            <div class="performance-value">
+
+                <h1>+18%</h1>
+
+                <small>Últimos 30 dias</small>
+
+            </div>
+
+        </div>
+
+        <svg class="sparkline" viewBox="0 0 900 220">
+
+            <defs>
+
+                <linearGradient id="greenGradient" x1="0%" x2="0%" y1="0%" y2="100%">
+
+                    <stop offset="0%" stop-color="#20d56f" stop-opacity=".45"/>
+
+                    <stop offset="100%" stop-color="#20d56f" stop-opacity="0"/>
+
+                </linearGradient>
+
+            </defs>
+
+            <path
+                class="spark-fill"
+                d="
+                M20 170
+                L100 150
+                L180 160
+                L260 120
+                L340 135
+                L420 90
+                L500 100
+                L580 75
+                L660 95
+                L740 55
+                L820 70
+                L900 35
+                L900 220
+                L20 220
+                Z
+                ">
+            </path>
+
+            <polyline
+                class="spark-line"
+                points="
+                20,170
+                100,150
+                180,160
+                260,120
+                340,135
+                420,90
+                500,100
+                580,75
+                660,95
+                740,55
+                820,70
+                900,35">
+            </polyline>
+
+        </svg>
+
+    </div>
+
+</section>
+
+<section class="metrics">
+
+    <div class="panel">
+
+        <h3>Métricas Gerais</h3>
+
+        <div class="metric">
+
+            <div class="metric-left">
+
+                <div class="metric-icon green">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+
+                <div>
+
+                    <h4>Precisão da IA</h4>
+
+                    <small>Última atualização</small>
+
+                </div>
+
+            </div>
+
+            <strong>96%</strong>
+
+        </div>
+
+        <div class="metric">
+
+            <div class="metric-left">
+
+                <div class="metric-icon blue">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <div>
+
+                    <h4>Scouts Ativos</h4>
+
+                    <small>Online agora</small>
+
+                </div>
+
+            </div>
+
+            <strong>184</strong>
+
+        </div>
+
+        <div class="metric">
+
+            <div class="metric-left">
+
+                <div class="metric-icon yellow">
+                    <i class="fa-solid fa-file-lines"></i>
+                </div>
+
+                <div>
+
+                    <h4>Relatórios</h4>
+
+                    <small>Últimos 30 dias</small>
+
+                </div>
+
+            </div>
+
+            <strong>1.258</strong>
+
+        </div>
+
+        <div class="metric">
+
+            <div class="metric-left">
+
+                <div class="metric-icon red">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+
+                <div>
+
+                    <h4>Banco de Dados</h4>
+
+                    <small>Status</small>
+
+                </div>
+
+            </div>
+
+            <strong class="online">Online</strong>
+
+        </div>
+
+    </div>
+
+</section>
+            
+        </main>
+
+    </div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
